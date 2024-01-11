@@ -26,5 +26,6 @@ func TestSnowflake(t *testing.T) {
 		if id < prev {
 			t.Fatalf("snowflake error unique: %d - %d", id, prev)
 		}
+		prev = id
 	}
 }
